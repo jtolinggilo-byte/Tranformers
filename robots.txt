@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Menghindari pengindeksan halaman admin blog secara publik jika diperlukan
+Disallow: /#login
+Disallow: /#admin
+
+Sitemap: https://transformersplus.id/sitemap.xml
