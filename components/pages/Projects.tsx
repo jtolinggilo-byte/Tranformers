@@ -402,13 +402,23 @@ const Projects: React.FC = () => {
         {!selectedProject ? (
           <>
             <section className="mb-24">
-              <div className="flex items-center gap-2 text-[10px] font-bold text-amber-500 mb-6 uppercase tracking-[0.3em]">
-                <Layers size={12} /> Portofolio Pembangunan
+              <div className="relative w-full aspect-[21/6] rounded-3xl overflow-hidden mb-16 border border-white/5 shadow-2xl group">
+                <img 
+                  src="https://assets.zyrosite.com/YyvX1Wk072ty3P48/20240811_125820-mP4QVzWLvOIpoEL5.jpg" 
+                  alt="Projects Background" 
+                  className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-[3s]"
+                />
+                <div className="absolute inset-0 bg-neutral-950/60"></div>
+                <div className="absolute inset-0 flex flex-col justify-center items-center px-12 text-center">
+                   <div className="flex items-center gap-2 text-[10px] font-bold text-amber-500 mb-6 uppercase tracking-[0.3em]">
+                    <Layers size={12} /> Portofolio Pembangunan
+                  </div>
+                  <h1 className="text-4xl md:text-6xl font-medium tracking-tight text-white mb-4 leading-tight">
+                    <span className="text-silver-gradient">Proyek & Impact</span> <br/>
+                    <span className="text-amber-gradient font-serif italic">Sustainability</span>
+                  </h1>
+                </div>
               </div>
-              <h1 className="text-5xl md:text-7xl font-medium tracking-tight text-white mb-8 leading-tight">
-                <span className="text-silver-gradient">Proyek & Impact</span> <br/>
-                <span className="text-amber-gradient font-serif italic">Sustainability</span>
-              </h1>
               <p className="text-xl text-neutral-400 max-w-3xl font-light leading-relaxed">
                 Transformers Plus Indonesia menghadirkan solusi pembangunan berkelanjutan melalui data-driven planning dan pendekatan sosial yang inklusif.
               </p>

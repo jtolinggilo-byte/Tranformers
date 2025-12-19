@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Twitter, Linkedin, Instagram, MapPin, ChevronRight, User, Mail, Phone } from 'lucide-react';
 
@@ -9,20 +10,22 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
   const Logo = () => (
     <svg viewBox="0 0 100 100" className="w-full h-full">
       <circle cx="50" cy="50" r="48" fill="white" />
-      <path 
-        d="M25 20 C35 40 45 50 75 80" 
-        stroke="black" 
-        strokeWidth="18" 
-        strokeLinecap="round" 
-        fill="none" 
-      />
-      <path 
-        d="M75 20 C65 40 55 50 25 80" 
-        stroke="black" 
-        strokeWidth="18" 
-        strokeLinecap="round" 
-        fill="none" 
-      />
+      <g transform="translate(-8, 0) rotate(-2, 50, 50)">
+        <path 
+          d="M25 20 C35 40 45 50 75 80" 
+          stroke="black" 
+          strokeWidth="19" 
+          strokeLinecap="round" 
+          fill="none" 
+        />
+        <path 
+          d="M75 20 C65 40 55 50 25 80" 
+          stroke="black" 
+          strokeWidth="19" 
+          strokeLinecap="round" 
+          fill="none" 
+        />
+      </g>
     </svg>
   );
 
@@ -63,7 +66,7 @@ const Footer: React.FC<FooterProps> = ({ navigate }) => {
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-lg font-bold tracking-tighter text-white uppercase group-hover:text-neutral-400 transition-colors">
-                  transformers plus
+                  transformers plus indonesia
                 </span>
                 <span className="text-[9px] font-medium tracking-widest text-neutral-500 uppercase mt-1">
                   Cope · Adapt · Grow

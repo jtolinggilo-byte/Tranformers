@@ -3,7 +3,11 @@ import React from 'react';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import Globe from './Globe';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  navigate: (path: string) => void;
+}
+
+const Hero: React.FC<HeroProps> = ({ navigate }) => {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-neutral-600/5 rounded-full blur-[120px] pointer-events-none"></div>
@@ -28,15 +32,21 @@ const Hero: React.FC = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-          <a href="#contact" className="group relative px-10 py-4 bg-white text-black rounded-full font-bold tracking-widest text-[11px] uppercase overflow-hidden transition-all hover:-translate-y-0.5 shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+          <button 
+            onClick={() => navigate('contact')}
+            className="group relative px-10 py-4 bg-white text-black rounded-full font-bold tracking-widest text-[11px] uppercase overflow-hidden transition-all hover:-translate-y-0.5 shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+          >
             <span className="relative z-10 flex items-center gap-2">
               Mulai Kolaborasi
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </span>
-          </a>
-          <a href="#about" className="px-10 py-4 text-neutral-300 border border-neutral-800 rounded-full font-bold tracking-widest text-[11px] uppercase hover:bg-neutral-900 hover:text-white transition-all bg-black/30 backdrop-blur-sm">
+          </button>
+          <button 
+            onClick={() => navigate('about')}
+            className="px-10 py-4 text-neutral-300 border border-neutral-800 rounded-full font-bold tracking-widest text-[11px] uppercase hover:bg-neutral-900 hover:text-white transition-all bg-black/30 backdrop-blur-sm"
+          >
             Tentang Kami
-          </a>
+          </button>
         </div>
       </div>
 

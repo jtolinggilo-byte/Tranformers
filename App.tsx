@@ -13,6 +13,7 @@ import Chatbot from './components/Chatbot';
 
 const App: React.FC = () => {
   const [currentPath, setCurrentPath] = useState<string>('home');
+  const [isChatbotOpen, setIsChatbotOpen] = useState(false);
 
   // Handle browser back/forward and initial load
   useEffect(() => {
@@ -41,7 +42,7 @@ const App: React.FC = () => {
       case 'blog': return <Blog />;
       case 'careers': return <Careers />;
       case 'contact': return <Contact />;
-      default: return <Home navigate={navigate} />;
+      default: return <Home navigate={navigate} setIsChatbotOpen={setIsChatbotOpen} />;
     }
   };
 
@@ -52,7 +53,7 @@ const App: React.FC = () => {
         {renderPage()}
       </main>
       <Footer navigate={navigate} />
-      <Chatbot />
+      <Chatbot isOpen={isChatbotOpen} setIsOpen={setIsChatbotOpen} />
     </div>
   );
 };

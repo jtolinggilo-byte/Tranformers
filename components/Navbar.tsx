@@ -23,20 +23,22 @@ const Navbar: React.FC<NavbarProps> = ({ navigate, currentPath }) => {
   const Logo = () => (
     <svg viewBox="0 0 100 100" className="w-full h-full">
       <circle cx="50" cy="50" r="48" fill="white" />
-      <path 
-        d="M25 20 C35 40 45 50 75 80" 
-        stroke="black" 
-        strokeWidth="18" 
-        strokeLinecap="round" 
-        fill="none" 
-      />
-      <path 
-        d="M75 20 C65 40 55 50 25 80" 
-        stroke="black" 
-        strokeWidth="18" 
-        strokeLinecap="round" 
-        fill="none" 
-      />
+      <g transform="translate(-8, 0) rotate(-2, 50, 50)">
+        <path 
+          d="M25 20 C35 40 45 50 75 80" 
+          stroke="black" 
+          strokeWidth="19" 
+          strokeLinecap="round" 
+          fill="none" 
+        />
+        <path 
+          d="M75 20 C65 40 55 50 25 80" 
+          stroke="black" 
+          strokeWidth="19" 
+          strokeLinecap="round" 
+          fill="none" 
+        />
+      </g>
     </svg>
   );
 
@@ -49,7 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({ navigate, currentPath }) => {
           </div>
           <div className="flex flex-col items-start leading-tight">
             <span className="text-sm font-bold tracking-tighter text-white uppercase group-hover:text-neutral-400 transition-colors">
-              transformers plus
+              transformers plus indonesia
             </span>
             <span className="text-[10px] font-medium tracking-[0.1em] text-neutral-500 lowercase">
               cope, adapt, and grow.

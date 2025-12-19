@@ -110,7 +110,7 @@ const SERVICES_DATA: ServiceDetail[] = [
     title: "Tailor-Made Services",
     h2: "Layanan Khusus (Tailor-Made Services)",
     shortDesc: "Solusi cerdas dan spesifik untuk tantangan unik setiap proyek, komunitas, dan konteks lokal.",
-    longDesc: "Kami memahami bahwa setiap proyek dan komunitas memiliki tantangan yang unik. Transformers Plus Indonesia menyediakan layanan khusus yang dapat disesuaikan dengan kebutuhan spesifik Anda untuk solusi yang cerdas, efektif, dan berkelanjutan.",
+    longDesc: "Kami memahami bahwa setiap proyek dan komunitas memiliki tantangan yang unik. Transformers Plus Indonesia menyediakan layanan khusus yang dapat disesuaikan dengan kebutuhan spesifik Anda untuk solusi yang cerdas, efektif, and berkelanjutan.",
     icon: <Lightbulb />,
     features: ["Pemetaan Stakeholder Khusus", "Perancangan Sustainable Livelihood", "Aksi Adaptasi & Mitigasi Perubahan Iklim", "Riset Kebijakan Strategis"]
   }
@@ -221,13 +221,23 @@ const Services: React.FC = () => {
         {!selectedService ? (
           <>
             <section className="mb-24">
-              <div className="flex items-center gap-2 text-[10px] font-bold text-amber-500 mb-6 uppercase tracking-[0.3em]">
-                <Globe2 size={12} /> Expertise & Solutions
+              <div className="relative w-full aspect-[21/7] rounded-3xl overflow-hidden mb-16 border border-white/5 shadow-2xl group">
+                <img 
+                  src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=503,h=386,fit=crop/YyvX1Wk072ty3P48/20230723_112447-Awvj3zg3G7fo0ayn.jpg" 
+                  alt="Field Activity" 
+                  className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-[3s]"
+                />
+                <div className="absolute inset-0 bg-neutral-950/60"></div>
+                <div className="absolute inset-0 flex flex-col justify-center items-center px-12 text-center">
+                   <div className="flex items-center gap-2 text-[10px] font-bold text-amber-500 mb-6 uppercase tracking-[0.3em]">
+                    <Globe2 size={12} /> Expertise & Solutions
+                  </div>
+                  <h1 className="text-4xl md:text-6xl font-medium tracking-tight text-white mb-4 leading-tight">
+                    <span className="text-silver-gradient">Layanan Pembangunan</span> <br/>
+                    <span className="text-amber-gradient font-serif italic">Berkelanjutan</span>
+                  </h1>
+                </div>
               </div>
-              <h1 className="text-5xl md:text-7xl font-medium tracking-tight text-white mb-8 leading-tight">
-                <span className="text-silver-gradient">Layanan Pembangunan</span> <br/>
-                <span className="text-amber-gradient font-serif italic">Berkelanjutan</span>
-              </h1>
               <p className="text-xl text-neutral-400 max-w-4xl font-light leading-relaxed">
                 Transformers Plus Indonesia menyediakan layanan multidisipliner dalam pembangunan berkelanjutan, tata kelola sosial, dan penguatan kelembagaan melalui pendekatan holistik dan standar internasional.
               </p>
@@ -243,7 +253,7 @@ const Services: React.FC = () => {
                   }}
                   className="group relative bg-neutral-900/30 border border-white/5 rounded-3xl p-8 cursor-pointer hover:bg-neutral-900/60 hover:border-amber-500/30 transition-all flex flex-col h-full"
                 >
-                  <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-8 text-neutral-500 group-hover:text-amber-500 transition-colors">
+                  <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center mb-8 text-neutral-500 group-hover:text-amber-400 transition-colors">
                     {s.icon}
                   </div>
                   <div className="mb-8">

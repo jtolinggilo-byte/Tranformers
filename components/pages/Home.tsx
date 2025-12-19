@@ -1,18 +1,17 @@
 
 import React from 'react';
 import Hero from '../Hero';
-import TrustedBy from '../TrustedBy';
 import { ArrowRight, CheckCircle2, Globe, Users, Shield } from 'lucide-react';
 
 interface HomeProps {
   navigate: (path: string) => void;
+  setIsChatbotOpen: (open: boolean) => void;
 }
 
-const Home: React.FC<HomeProps> = ({ navigate }) => {
+const Home: React.FC<HomeProps> = ({ navigate, setIsChatbotOpen }) => {
   return (
     <div className="animate-fade-in">
-      <Hero />
-      <TrustedBy />
+      <Hero navigate={navigate} />
 
       {/* Intro Section */}
       <section className="py-24 bg-neutral-950">
@@ -32,10 +31,16 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
                 Pelajari Lebih Lanjut <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
-            <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/5 bg-neutral-900 shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-neutral-800/20 to-neutral-950"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Shield size={64} className="text-white opacity-20" />
+            <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/5 bg-neutral-900 shadow-2xl group">
+              <img 
+                src="https://assets.zyrosite.com/YyvX1Wk072ty3P48/3-1-AQEpgq0Do7sDeM4G.jpg" 
+                alt="Workshop Transformers Plus Indonesia" 
+                className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent"></div>
+              <div className="absolute bottom-6 left-6 flex items-center gap-2">
+                <div className="w-1 h-1 rounded-full bg-amber-500"></div>
+                <span className="text-[10px] font-bold text-white/50 uppercase tracking-widest">Community Engagement Activity</span>
               </div>
             </div>
           </div>
@@ -77,7 +82,7 @@ const Home: React.FC<HomeProps> = ({ navigate }) => {
             Membuka peluang kolaborasi lintas sektor untuk merancang dan mengimplementasikan inisiatif pembangunan berkelanjutan yang berdampak, inklusif, dan terukur.
           </p>
           <button 
-            onClick={() => navigate('contact')}
+            onClick={() => setIsChatbotOpen(true)}
             className="px-10 py-4 bg-white text-black font-bold tracking-widest text-xs uppercase rounded-full hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.1)]"
           >
             Mulai Diskusi

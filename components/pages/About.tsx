@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { History, Target, Users2, ScrollText, Globe2, Mail, Phone, User } from 'lucide-react';
 
@@ -7,6 +8,14 @@ const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* About Hero */}
         <section className="mb-32">
+          <div className="relative w-full aspect-[21/9] rounded-3xl overflow-hidden mb-16 border border-white/5 group shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1606701587683-c4b1b22c59d4?auto=format&fit=crop&w=1920" 
+              alt="Transformers Team Activity" 
+              className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-[2s]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-neutral-950 via-neutral-950/40 to-transparent"></div>
+          </div>
           <h1 className="text-5xl md:text-7xl font-medium tracking-tight text-white mb-12">
             <span className="text-silver-gradient">Transformers Plus</span> <br/>
             <span className="text-amber-gradient italic font-serif">Indonesia</span>

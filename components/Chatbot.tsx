@@ -1,3 +1,4 @@
+
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send, User, Bot, Loader2 } from 'lucide-react';
 
@@ -6,8 +7,12 @@ interface Message {
   content: string;
 }
 
-const Chatbot: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface ChatbotProps {
+  isOpen: boolean;
+  setIsOpen: (open: boolean) => void;
+}
+
+const Chatbot: React.FC<ChatbotProps> = ({ isOpen, setIsOpen }) => {
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Message[]>([
     { role: 'bot', content: 'Halo! Saya asisten virtual Transformers Plus Indonesia. Ada yang bisa saya bantu terkait pembangunan berkelanjutan atau layanan kami?' }
